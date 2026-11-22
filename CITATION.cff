@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: Medical Research Skills
+message: If you use this project, please cite it as below.
+authors:
+  - given-names: J.
+    family-names: Stone
+    orcid: https://orcid.org/0000-0000-0000-0000
+date-released: 2026-11-22
+version: 0.1.0
