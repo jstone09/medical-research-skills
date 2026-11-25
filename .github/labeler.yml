@@ -1,0 +1,21 @@
+area:Documentation:
+  - changed-files:
+      - any-glob-to-any-file: ['README.md', 'awesome-med-research-skills/**/SKILL.md', 'scientific-skills/**/SKILL.md']
+area:CI:
+  - changed-files:
+      - any-glob-to-any-file: ['.github/workflows/**']
+area:Data Analysis:
+  - changed-files:
+      - any-glob-to-any-file: ['**/Data Analysis/**']
+area:Evidence Insight:
+  - changed-files:
+      - any-glob-to-any-file: ['**/Evidence Insight/**']
+area:Protocol Design:
+  - changed-files:
+      - any-glob-to-any-file: ['**/Protocol Design/**']
+area:Academic Writing:
+  - changed-files:
+      - any-glob-to-any-file: ['**/Academic Writing/**']
+area:Other:
+  - changed-files:
+      - any-glob-to-any-file: ['**/Other/**']

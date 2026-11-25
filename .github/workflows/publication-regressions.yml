@@ -10,6 +10,10 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: publication-regressions-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   regression:
     strategy:
@@ -21,6 +25,13 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # cache v6.1.0 pinned
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
           persist-credentials: false
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:

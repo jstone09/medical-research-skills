@@ -1,0 +1,19 @@
+name: Validate SKILL.md files
+on:
+  pull_request:
+    paths:
+      - '**/SKILL.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1 pinned
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6 pinned
+        with:
+          python-version: '3.10'
+      - name: Run validator
+        run: |
+          python scripts/validate_skills.py

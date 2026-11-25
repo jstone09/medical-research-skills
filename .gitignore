@@ -54,3 +54,12 @@ __pycache__/
 
 # 日志文件
 *.log
+
+# Common build and env dirs
+node_modules/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.cache/
